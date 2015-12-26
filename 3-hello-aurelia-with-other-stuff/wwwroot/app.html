@@ -1,7 +1,9 @@
 <template>
     <div>${message}</div>
+    <div>full message: ${fullMessage}</div>
     <ul>
         <li repeat.for="user of users">${user}</li>
     </ul>
     <button click.trigger="changeMessage()">Change Message</button>
+    <button click.trigger="removeUser()">Remove User</button>
 </template>

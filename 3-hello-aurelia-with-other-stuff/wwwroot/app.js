@@ -13,7 +13,15 @@ export class App {
         });
     }
     
+    get fullMessage() {
+        return `${this.message} (as full message)`;
+    }
+    
     changeMessage() {
         this.message = "Goodbye!"
+    }
+    
+    removeUser() {
+        this.users.pop();
     }
 }
