@@ -1,0 +1,19 @@
+<template>
+    <div>You have ${movies.length} movies :)</div>
+    <table>
+        <thread>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Release Year</th>
+        </thread>
+        <tbody>
+            <tr repeat.for="movie of movies">
+                <td>${movie.id}</td>
+                <td>${movie.title}</td>
+                <td>${movie.releaseYear}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div>${message}</div>
+    <button click.trigger="changeMessage()">Change Message</button>
+</template>
