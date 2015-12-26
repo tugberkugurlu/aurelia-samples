@@ -1,0 +1,3 @@
+ - `jspm init`
+ - `cd wwwroot`
+ - `http-server -o`
