@@ -1,20 +1,18 @@
 import {inject} from 'aurelia-framework';
-import {HttpClient} from 'aurelia-http-client';
+import {MovieClient} from 'movieclient';
 
-@inject(HttpClient)
+@inject(MovieClient)
 export class App {
     
-    constructor(httpClient) {
+    constructor(movieClient) {
         this.message = null;
-        this.http = httpClient;
+        this.movieClient = movieClient;
     }
     
     activate() {
         this.message = "Hello from Aurelia!";
-        return this.http.get('/movies.json')
-                        .then(response => {
-                            this.movies = response.content;
-                        })
+        return this.movieClient.getMovies()
+                               .then(movies => this.movies = movies);
     }
     
     changeMessage() {
