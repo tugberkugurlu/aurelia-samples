@@ -1,0 +1,7 @@
+<template>
+    <div>${message}</div>
+    <ul>
+        <li repeat.for="user of users">${user}</li>
+    </ul>
+    <button click.trigger="changeMessage()">Change Message</button>
+</template>
